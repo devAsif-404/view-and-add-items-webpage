@@ -14,6 +14,8 @@ const storage = multer.diskStorage({
     cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
   }
 });
+const API_BASE_URL = "https://item-backend.onrender.com"; // replace with your real backend URL
+
 
 const upload = multer({ 
   storage: storage,
